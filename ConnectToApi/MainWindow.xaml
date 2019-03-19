@@ -7,12 +7,17 @@
         mc:Ignorable="d" Loaded="Window_Loaded"
         Title="MainWindow" Height="962.4" Width="800">
     <Grid>
-        <StackPanel Grid.Row="0"  Orientation="Horizontal" HorizontalAlignment="Right" Width="364" VerticalAlignment="Center" Height="199" Margin="0,38,259.6,183" RenderTransformOrigin="0.5,0.542">
-            <Button x:Name="button" Content="Previous" Padding="15" Margin="15,136,15,15.4" Click="Button_Click"/>
-            <Button x:Name="button1" Content="SunInformation" Padding="15" Margin="15,136,15,15.4" Click="Button1_Click"/>
-            <Button x:Name="button2" Content="Next" Padding="15" Margin="15,136,15,15.4" HorizontalAlignment="Right" Click="Button2_Click"/>
-        </StackPanel>
-        <Image x:Name="comicImage" HorizontalAlignment="Left" Height="168" Margin="0,242,-0.4,0" VerticalAlignment="Top" Width="794"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="button" Padding="15" Margin="15" Click="Button_Click">Previous</Button>
+            <Button x:Name="button1" Padding="15" Margin="15" Click="Button1_Click">Sun Information</Button>
+            <Button x:Name="button2" Padding="15" Margin="15" Click="Button2_Click">Next</Button>
+        </StackPanel>
+
+        <Image Grid.Row="1" x:Name="comicImage" Margin="20" />
     </Grid>
 </Window>
